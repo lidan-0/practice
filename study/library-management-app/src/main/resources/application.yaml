@@ -1,2 +1,13 @@
 server:
   port: 8088
+  servlet:
+    context-path: /
+
+
+spring:
+  datasource:
+    username: lidan
+    password: Test1234
+    url: jdbc:mysql://localhost:3306/study?useUnicode=true&characterEncoding=utf-8&useSSL=true&serverTimezone=UTC
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
