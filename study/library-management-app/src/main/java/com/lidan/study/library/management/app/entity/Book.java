@@ -2,10 +2,7 @@ package com.lidan.study.library.management.app.entity;
 
 import lombok.Data;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 import java.io.Serializable;
 
 /**
@@ -13,17 +10,17 @@ import java.io.Serializable;
  * 书的相关信息
  */
 @Data
-@Table(name="book")
+@Entity
 public class Book implements Serializable {
 
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue
     private Integer id;
-    @Column(name = "name")
+    @Column(nullable = false, unique = true, length = 32)
     private String name;
-    @Column(name = "author")
     private String author;
-    @Column(name = "content")
     private String content;
+
+
 }
