@@ -19,7 +19,9 @@ public class Book implements Serializable {
     private Integer id;
     @Column(nullable = false, unique = true, length = 32)
     private String name;
+    @Column(nullable = false, length = 32)
     private String author;
+    @Column(nullable = false)
     private String content;
 
 

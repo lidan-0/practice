@@ -2,16 +2,22 @@ server:
   port: 8088
   servlet:
     context-path: /
-
-
 spring:
+  thymeleaf:
+    cache: false
+    check-template: true
+    check-template-location: true
+    encoding: UTF-8
+    prefix: classpath:/templates/
+    servlet:
+      content-type: text/html
+    suffix: .html
   profiles:
     active: prod
   jpa:
     hibernate:
       ddl-auto: update
     show-sql: true
-
   datasource:
     username: lidan
     password: Test1234
